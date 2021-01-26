@@ -1,0 +1,11 @@
+<h1>Infos</h1>
+
+<ul>
+  <% @infos.reverse_each do |info| %>
+    <li>
+      <%= link_to info.title, info %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Info", new_info_path %>
