@@ -1,11 +1,23 @@
 <h1>Infos</h1>
+</br>
+<%= link_to "New Info", new_info_path, :class => "btn btn-success" %>
+</br>
+</br>
 
-<ul>
-  <% @infos.reverse_each do |info| %>
-    <li>
-      <%= link_to info.title, info %>
-    </li>
+<div class="position-absolute start-50">
+<% @infos.reverse_each do |info| %>
+  <div class="card bg-warning" style="width: 25rem; height: 13rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= info.title%></h5>
+      <p class="card-text"><%= info.body%></p>
+      </br>
+      </br>
+      <%= link_to "Göster", info, :class => "btn btn-primary position-relative"%>
+  
+    </div>
+  </div>
+    </br>
+    </br>
   <% end %>
-</ul>
+</div>
 
-<%= link_to "New Info", new_info_path %>

@@ -29,7 +29,7 @@ class InfosController < ApplicationController
     @info = Info.find(params[:id])
 
     if @info.update(info_params)
-      redirect_to @info
+      redirect_to @info, notice:"Info güncellendi"
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class InfosController < ApplicationController
     @info = Info.find(params[:id])
     @info.destroy
 
-    redirect_to root_path
+    redirect_to root_path, notice:"Info silindi"
   end
 
 

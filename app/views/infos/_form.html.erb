@@ -1,21 +1,27 @@
-<%= form_with model: info do |form| %>
-    <div>
-      <%= form.label :experience %><br>
-      <%= form.text_field :title %>
-      <% info.errors.full_messages_for(:title).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
+<div>
+  <%= form_with model: info do |form| %>
+    <div class="row mb-4 col-md-4">
+      <div class="row md-4">
+        <%= form.label :experience %>
+        <%= form.text_field :title, :class => "col-md-3" %>
+        <% info.errors.full_messages_for(:title).each do |message| %>
+          <div><%= message %></div>
+          <% end %>
+      </div>
+      
+      <div class="row mb-4">
+        <%= form.label :content %>
+        <%= form.text_area :body, :class => "col-md-3" %>
+        <% info.errors.full_messages_for(:body).each do |message| %>
+          <div><%= message %></div>
+          <% end %>
+      </div>
+        
     </div>
-  
-    <div>
-      <%= form.label :content %><br>
-      <%= form.text_area :body %><br>
-      <% info.errors.full_messages_for(:body).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
-    </div>
-  
-    <div>
-      <%= form.submit "Kaydet" %>
-    </div>
-  <% end %>
+    
+    
+      <div>
+        <%= form.submit "Kaydet" , :class => "btn btn-success"%>
+      </div>
+    <% end %>
+</div> 

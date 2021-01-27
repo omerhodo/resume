@@ -2,10 +2,11 @@
 
 <p><%= @info.body %></p>
 
+<div>
+<%= link_to "Edit", edit_info_path(@info), :class => "btn btn-warning" %>
 
-<ul>
-  <li><%= link_to "Edit", edit_info_path(@info) %></li>
-  <li><%= link_to "Destroy", info_path(@info),
+<%= link_to "Destroy", info_path(@info), :class => "btn btn-danger",
                   method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>
-</ul>
+                  data: { confirm: "Are you sure?" } %>
+
+</div>
