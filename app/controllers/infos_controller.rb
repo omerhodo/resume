@@ -40,7 +40,7 @@ class InfosController < ApplicationController
     @info = Info.find(params[:id])
     @info.destroy
 
-    redirect_to root_path, notice:"Info silindi"
+    redirect_to root_path
   end
 
 

@@ -3,10 +3,9 @@
 <p><%= @info.body %></p>
 
 <div>
-<%= link_to "Edit", edit_info_path(@info), :class => "btn btn-warning" %>
+<%= link_to "Düzenle", edit_info_path(@info), :class => "btn btn-warning" %>
+</br>
+<%= button_to 'Sil', info_path(@info), method: :delete, :class => "btn btn-danger", :onclick => "return confirm('Silmek istediğinize emin misiniz?')" %>
 
-<%= link_to "Destroy", info_path(@info), :class => "btn btn-danger",
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
 
 </div>
