@@ -4,25 +4,27 @@
 </br>
 </br>
 
-<% @infos.reverse_each do |info| %>
 <div class="d-flex justify-content-center">
   <div class="row">
-    <div class="col">
-      <div class="card bg-warning" style="width: 25rem;">
-        <div class="card-body">
-          <h5 class="card-title"><%= info.title%></h5>
-          <p class="card-text"><%= info.body%></p>
-          </br>
-          </br>
-          <%= link_to "Göster", info, :class => "btn btn-primary position-relative"%>
-      
+    <% @infos.reverse_each do |info| %>
+      <div class="col">
+        <div class="card bg-warning" style="width: 25rem;">
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= info.title %>
+            </h5>
+            <p class="card-text">
+              <%= info.body %>
+            </p>
+            </br>
+            </br>
+            <%= link_to "Göster", info, :class => "btn btn-primary position-relative" %>
+
+          </div>
         </div>
       </div>
-        </br>
-        </br>
-      <% end %>
-    </div>
+
+
+    <% end %>
   </div>
-
 </div>
-
